@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* old way */
+/* .container {
+  max-width: 840px;
+  padding: 0 20px;
+  margin: 0 auto;
+} */
+
+/* new way */
+.container {
+  width: min(100% - 20px, 840px);
+  margin-inline: auto;
+  /* padding: 0 20px; */
+}
+
+/* old way */
+.one p,
+.two p,
+.three p {
+  color: red;
+}
+/* new way */
+:where(.one, .two, .three) > p {
+  color: blue;
+}
+img {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 20px;
+}
